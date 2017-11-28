@@ -8,6 +8,8 @@ A Table-driven Object Model
 This model factor out all member specific information,placing it in a data member and member function pair of tables.
 
 The C++ Object Model
-Nonstatic
+Nonstatic members are allocated dirctly within each class object.Static data members are stored outside the individual class object.Static and nonstatic functions are also hoisted outside the class object.Virtual functions are supported in two steps:
+    1.A table of pointers to virtual functions is generated for each class(this is called the virtual table).
+    2.A single pointer to the associated virtual table is inserted in each class object.
 
 
